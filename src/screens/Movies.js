@@ -30,7 +30,7 @@ const HeaderBtn = ({focused, onPress, label}) => (
 );
 
 const MovieItem = ({movie, navigation}) => (
-  <TouchableOpacity style={styles.movieItem} onPress={() => navigation.navigate('Movie', {movie})}>
+  <TouchableOpacity style={styles.movieItem} onPress={() => navigation.navigate('Movie', {movie, navigation})}>
     <Image source={{uri: movie.poster_big}} style={styles.movieItemImage} />
   </TouchableOpacity>
 );
