@@ -31,6 +31,7 @@ const MovieVideo = ({ route }) => {
           id: 'player',
           magnet: '${torrent_magnet}',
           width: '100%',
+          height: '100%',
           on: function (e) {
             if (e.name == window.webtor.TORRENT_FETCHED) {
               console.log('Torrent fetched!', e.data);
@@ -64,6 +65,9 @@ const MovieVideo = ({ route }) => {
       <WebView
         source={{ html }}
         injectedJavaScriptBeforeContentLoaded={runFirst}
+        javaScriptEnabled={true}
+        scrollEnabled={false}
+        allowsFullscreenVideo={true}
       />
     </View>
   );
