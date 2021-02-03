@@ -24,9 +24,11 @@ const { width, height } = Dimensions.get("window");
 const Trailer = ({ url }) => {
   return (
     <WebView
-      style={{ marginTop: Platform.OS == "ios" ? 70 : 0, flex: 1, maxHeight: 200}}
+      style={{ marginTop: Platform.OS == "ios" ? 70 : 0, flex: 1, maxHeight: 200, alignSelf: 'stretch'}}
       javaScriptEnabled={true}
       domStorageEnabled={true}
+      allowsFullscreenVideo={true}
+      scalesPageToFit={true}
       source={{ uri: url }}
     />
   );

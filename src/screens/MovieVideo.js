@@ -68,6 +68,7 @@ const MovieVideo = ({ route }) => {
         javaScriptEnabled={true}
         scrollEnabled={false}
         allowsFullscreenVideo={true}
+        scalesPageToFit={true}
       />
     </View>
   );
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: (height - 300) / 2,
+    alignSelf: 'stretch'
   },
 });
 
